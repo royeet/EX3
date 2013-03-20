@@ -38,7 +38,6 @@ public class TodoDisplayAdapter extends ArrayAdapter <ToDoItem>{
 		todoDate.setText(dueStr);
 		Time now = new Time();
 		now.setToNow();
-		@SuppressWarnings("deprecation")
 		Date nowD = new Date (now.year-1900,now.month,now.monthDay);
 		
 		if (item.eventDate.before(nowD)){

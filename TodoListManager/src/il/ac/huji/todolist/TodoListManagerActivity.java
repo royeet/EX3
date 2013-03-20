@@ -15,6 +15,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 
@@ -63,7 +65,7 @@ public class TodoListManagerActivity extends Activity {
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-	
+		// TODO Auto-generated method stub
 		super.onActivityResult(requestCode, resultCode, data);
 		if (resultCode == RESULT_CANCELED) return;
 
@@ -79,6 +81,7 @@ public class TodoListManagerActivity extends Activity {
 	@Override
 	public void onCreateContextMenu(ContextMenu menu, View v,
 			ContextMenuInfo menuInfo) {
+		// TODO Auto-generated method stub
 		super.onCreateContextMenu(menu, v, menuInfo);
 
 		getMenuInflater().inflate(R.menu.context_menu, menu); 

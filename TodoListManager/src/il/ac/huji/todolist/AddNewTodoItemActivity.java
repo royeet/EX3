@@ -2,7 +2,6 @@ package il.ac.huji.todolist;
 
 import java.util.Date;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,9 +16,12 @@ public class AddNewTodoItemActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setTitle("Add New Item");
 		setContentView(R.layout.add_new_item);
+		
 		setOkButton();
 		setCancelButton();
+		//requestWindowFeature(Window.FEATURE_NO_TITLE);
 	}
 
 	private void setCancelButton() {
@@ -46,7 +48,6 @@ public class AddNewTodoItemActivity extends Activity {
 			public void onClick(View v) {
 				Intent intent = getIntent();
 				
-				@SuppressWarnings("deprecation")
 				Date due = new Date (dp.getYear()-1900, dp.getMonth(), dp.getDayOfMonth());
 				
 				intent.putExtra("dueDate", due);
@@ -57,4 +58,8 @@ public class AddNewTodoItemActivity extends Activity {
 		});
 		
 	}
+	
+	
+	
+	
 }
